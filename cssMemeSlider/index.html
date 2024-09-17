@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Slider</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+  <div class="slider-container">
+    <div class="slider">
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+      <input type="radio" name="slide" id="slide4">
+      <div class="slide__image">
+        <img src="./assets/images/image1.jpg" alt="image" class="slide__img">
+      </div>
+      <div class="slide__image">
+        <img src="./assets/images/image2.jpg" alt="image" class="slide__img">
+      </div>
+      <div class="slide__image">
+        <img src="./assets/images/image3.jpg" alt="image" class="slide__img">
+      </div>
+    </div>
+    <div class="slide__image">
+      <img src="./assets/images/image4.jpg" alt="image" class="slide__img">
+    </div>
+    <div class="slide__description">
+      <p>Meme 1</p>
+    </div>
+    <div class="slide__description">
+      <p>Meme 1</p>
+    </div>
+    <div class="slide__description">
+      <p>Meme 1</p>
+    </div>
+    <div class="slide__description">
+      <p>Meme 1</p>
+    </div>
+    <div class="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+    </div>
+  </div>
 </body>
+
 </html>

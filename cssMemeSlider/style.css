@@ -5,3 +5,50 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(35, 35, 35);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ------------------- */
+
+.slider-container {
+  width: 60vw;
+  height: 60vh;
+  max-width: 100%;
+  margin: 25vh auto;
+  
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  transform: translateX(0);
+}
+
+.slide__image {
+  width: 60vw;
+  height: 50vh;
+
+}
+
+.slide__img {
+  object-fit: contain;
+}
