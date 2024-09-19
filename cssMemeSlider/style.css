@@ -40,6 +40,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow: hidden;
 }
 
 .slider:last-child {
@@ -54,11 +55,12 @@ ul {
   width: 64rem;
   height: 42rem;
   display: flex;
-  overflow: hidden;
+  transition: .5s;
+  transition-timing-function: ease-in-out;
 }
 
 .slide__image {
-  transform: translateX(0);
+
 }
 
 .slide__img {
@@ -70,16 +72,18 @@ ul {
 .slider__inner {
   display: flex;
   justify-content: space-between;
+  height: 1.8rem;
+  overflow: hidden;
 }
 
 .slider__descriptions {
   display: flex;
   flex-direction: column;
-  height: 1.75rem;
-  overflow: hidden;
   font-family: 'Roboto';
   font-size: 1.5rem;
   color: azure;
+  transition: .5s;
+  transition-timing-function: ease-in-out;
 }
 
 .slide__description {
@@ -95,8 +99,8 @@ ul {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .control-wrapper:hover .control {
@@ -113,9 +117,48 @@ ul {
   display: block;
   width: 1rem;
   height: 1rem;
-  border: solid 1px rgb(57, 57, 242);
+  border: solid 0.125rem rgb(57, 57, 242);
   border-radius: 50%;
   background-color: rgb(57, 57, 242);
   cursor: pointer;
   transition: .5s;
+}
+
+#slide1:checked ~ .slider__inner .controls .control-wrapper:nth-of-type(1) .control,
+#slide2:checked ~ .slider__inner .controls .control-wrapper:nth-of-type(2) .control,
+#slide3:checked ~ .slider__inner .controls .control-wrapper:nth-of-type(3) .control,
+#slide4:checked ~ .slider__inner .controls .control-wrapper:nth-of-type(4) .control {
+  background-color: rgb(35, 35, 35);
+}
+
+#slide1:checked ~ .slider__images {
+  margin-left: 0%;
+}
+
+#slide2:checked ~ .slider__images {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .slider__images {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .slider__images {
+  margin-left: -300%;
+}
+
+#slide1:checked ~ .slider__inner .slider__descriptions {
+  margin-top: 0;
+}
+
+#slide2:checked~.slider__inner .slider__descriptions {
+  margin-top: -1.8rem;
+}
+
+#slide3:checked~.slider__inner .slider__descriptions {
+  margin-top: -3.6rem;
+}
+
+#slide4:checked~.slider__inner .slider__descriptions {
+  margin-top: -5.4rem;
 }
